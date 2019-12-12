@@ -5,9 +5,9 @@ import axios from 'axios';
 import router from './router'
 import store from './store'
 
-axios.defaults.baseURL = 'https://vue-axios-aff58.firebaseio.com';
-axios.defaults.headers.common['Authorization'] = 'blah';//example
-axios.defaults.headers.get['Accepts'] ='application/json';//example
+//axios.defaults.baseURL = 'https://vue-axios-aff58.firebaseio.com';
+// axios.defaults.headers.common['Authorization'] = 'blah';//example
+// axios.defaults.headers.get['Accepts'] ='application/json';//example
 
 const reqInterceptor = axios.interceptors.request.use(config => {
   console.warn(config);
