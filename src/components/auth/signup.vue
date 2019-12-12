@@ -69,7 +69,7 @@
 </template>
 
 <script>
-import axios from 'axios';
+import axios from '../../axios-auth';
 
   export default {
     data () {
@@ -104,7 +104,7 @@ import axios from 'axios';
           hobbies: this.hobbyInputs.map(hobby => hobby.value),
           terms: this.terms
         }
-        axios.post('https://vue-axios-aff58.firebaseio.com/users.json', formData)
+        axios.post('/users.json', formData)
           .then(res => console.log(res))
           .catch(err => console.log(err))
       }

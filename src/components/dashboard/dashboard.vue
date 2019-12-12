@@ -7,7 +7,7 @@
 </template>
 
 <script>
-import axios from "axios";
+import axios from "../../axios-auth";
 
 export default {
   data() {
@@ -17,7 +17,7 @@ export default {
   },
   created() {
     axios
-      .get("https://vue-axios-aff58.firebaseio.com/users.json")
+      .get("/users.json")
       .then(res => {
         const data = res.data;
         const users = [];
